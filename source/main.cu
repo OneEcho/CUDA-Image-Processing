@@ -34,6 +34,7 @@ __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
   dim3 block(16, 16);
   dim3 grid(width / 16, height / 16);
   imgProcessingKernel<<<grid, block>>>(d_origImg, d_newImg, width, height);
+  cudaThreadSynchronize();
   cudaMemcpy(h_newImg, d_newImg, sizeof(unsigned char) * width * height,
              cudaMemcpyDeviceToHost);
 }
@@ -55,7 +56,6 @@ int main() {
 
   // host function to start the image processing
   imgProcessing(h_origImg, h_newImg, imgWidth, imgHeight);
-  cudaThreadSynchronize();
 
   printf("Orig img at (43, 65) is %d and New img at (43, 65) is %d",
          h_origImg[43 * imgWidth + 65], h_newImg[43 * imgWidth + 65]);
