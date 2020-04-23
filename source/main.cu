@@ -10,10 +10,15 @@ __global__ void imgProcessingKernel(unsigned char *d_origImg,
                                     int height) {
   // calculates the unique pixel coordinate for each thread to work on (1 pixel
   // for 1 thread)
-  int col = blockIdx.x * blockDim.x + threadIdx.x;
-  int row = blockIdx.y * blockDim.y + threadIdx.y;
+  int x = (blockIdx.x * blockDim.x) + threadIdx.x;
+  int y = (blockIdx.y * blockDim.y) + threadIdx.y;
 
-  d_newImg[row * width + col] = d_origImg[row * width + col];
+  unsigned char *origPixel = &d_origImg[x * width + y];
+  unsigned char *newPixel = &d_newImg[x * width + y];
+
+  newPixel[0] = origPixel[0]; // r
+  newPixel[1] = origPixel[1]; // g
+  newPixel[2] = origPixel[2]; // b
 }
 
 __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
@@ -31,9 +36,10 @@ __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
              cudaMemcpyHostToDevice);
 
   // setup of the block and grid
-  dim3 block(16, 16);
-  dim3 grid(width / 16, height / 16);
-  imgProcessingKernel<<<grid, block>>>(d_origImg, d_newImg, width, height);
+  dim3 threadsPerBlock(8, 8);
+  dim3 numBlocks(width / threadsPerBlock.x, height / threadsPerBlock.y);
+  imgProcessingKernel<<<numBlocks, threadsPerBlock>>>(d_origImg, d_newImg,
+                                                      width, height);
   cudaThreadSynchronize();
   cudaMemcpy(h_newImg, d_newImg, sizeof(unsigned char) * width * height,
              cudaMemcpyDeviceToHost);
@@ -46,19 +52,20 @@ int main() {
   // allocate memory for original image on host
   unsigned char *h_origImg =
       stbi_load(IMG_PATH, &imgWidth, &imgHeight, &imgPixelComponents, 0);
+
   // allocate memory for the new image on host
   unsigned char *h_newImg =
-      (unsigned char *)malloc(sizeof(unsigned char) * imgWidth * imgHeight);
+      (unsigned char *)malloc(sizeof(unsigned char) * imgWidth * imgHeight * 3);
 
-  printf("The image has a width of %d and a height of %d with %d components "
-         "per pixel. The pixel value at (128,128) is %d\n",
-         imgWidth, imgHeight, imgPixelComponents, h_origImg[128]);
+  // printf("The image has a width of %d and a height of %d with %d components "
+  //        "per pixel. The pixel value at (128,128) is %d\n",
+  //        imgWidth, imgHeight, imgPixelComponents, h_origImg[128]);
+  int size = sizeof(h_origImg);
+  printf("The length of the original image array is %d.\n", size);
 
   // host function to start the image processing
   imgProcessing(h_origImg, h_newImg, imgWidth, imgHeight);
-
-  printf("Orig img at (43, 65) is %d and New img at (43, 65) is %d",
-         h_origImg[43 * imgWidth + 65], h_newImg[43 * imgWidth + 65]);
+  cudaDeviceSynchronize();
 
   stbi_write_jpg("images/shell-image-copy.jpg", imgWidth, imgHeight,
                  imgPixelComponents, h_newImg, 100);
