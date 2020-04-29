@@ -7,10 +7,28 @@
 
 __global__ void imgProcessingKernel(unsigned char *d_origImg,
                                     unsigned char *d_newImg) {
-  // each thread will work on a R, G, or B value of the image
+  // each thread will work on pixel value of the image, a pixel is represented
+  // with 3 values R, G, and B
   int i = blockIdx.x * blockDim.x + threadIdx.x;
+  if (i % 3 != 0) {
+    return;
+  }
 
-  d_newImg[i] = d_origImg[i];
+  // gaussian blur kernel
+  float blurKernel[3][3] = {{0.1111, 0.1111, 0.1111},
+                            {0.1111, 0.1111, 0.1111},
+                            {0.1111, 0.1111, 0.1111}};
+
+  // convert 1d to 2d coords
+  int x = i % 768;
+  int y = i / 768;
+
+  // ignore edges
+  if (y != 0 && y != 255 && x != 0 && x != 765) {
+    d_newImg[i] = d_origImg[i];         // R
+    d_newImg[i + 1] = d_origImg[i + 1]; // G
+    d_newImg[i + 2] = d_origImg[i + 2]; // B
+  }
 }
 
 __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
@@ -18,7 +36,8 @@ __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
   unsigned char *d_origImg;
   unsigned char *d_newImg;
 
-  // allocate memory for the original image and new image on the device
+  // allocate memory for the original image, new image, and convolution kernel
+  // on the device
   cudaMalloc((void **)&d_origImg, imgSize);
   cudaMalloc((void **)&d_newImg, imgSize);
 
