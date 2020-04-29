@@ -30,9 +30,11 @@ __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
   dim3 threadsPerBlock(1024);
   // calculate the amount of blocks needed
   dim3 numBlocks(imgSize / 1024);
+
   // perform image processing
   imgProcessingKernel<<<numBlocks, threadsPerBlock>>>(d_origImg, d_newImg);
   cudaThreadSynchronize();
+
   // copy device image to host image
   cudaMemcpy(h_newImg, d_newImg, imgSize, cudaMemcpyDeviceToHost);
 
@@ -54,12 +56,12 @@ int main() {
   }
 
   // calculate the image size
-  size_t imgSize =
-      imgChannels * imgHeight * imgChannels * sizeof(unsigned char);
+  unsigned long int imgSize = (imgWidth * imgHeight) * imgChannels;
 
   printf("Loaded an image with a width of %dpx, a height of %dpx and %d "
-         "channels\n",
-         imgWidth, imgHeight, imgChannels);
+         "channels. The image size calculate is then imgChannels * imgHeight * "
+         "imgChannels = %lu\n",
+         imgWidth, imgHeight, imgChannels, imgSize);
 
   // allocate memory for the new image on host
   unsigned char *h_newImg = (unsigned char *)malloc(imgSize);
