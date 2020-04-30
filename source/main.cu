@@ -19,16 +19,40 @@ __global__ void imgProcessingKernel(unsigned char *d_origImg,
                             {0.1111, 0.1111, 0.1111},
                             {0.1111, 0.1111, 0.1111}};
 
+  int rMat[3][3];
+  int gMat[3][3];
+  int bMat[3][3];
+
   // convert 1d to 2d coords
   int x = i % 768;
   int y = i / 768;
 
   // ignore edges
   if (y != 0 && y != 255 && x != 0 && x != 765) {
-    d_newImg[i] = d_origImg[i];         // R
-    d_newImg[i + 1] = d_origImg[i + 1]; // G
-    d_newImg[i + 2] = d_origImg[i + 2]; // B
+    rMat[0][0] = d_origImg[(x - 3) + 768 * (y - 1)];
+    rMat[1][0] = d_origImg[x + 768 * (y - 1)];
+    rMat[2][0] = d_origImg[(x + 3) + 768 * (y - 1)];
+    rMat[0][1] = d_origImg[(x - 3) + 768 * y];
+    rMat[1][1] = d_origImg[x + 768 * y];
+    rMat[2][1] = d_origImg[(x + 3) + 768 * y];
+    rMat[0][2] = d_origImg[(x - 3) + 768 * (y + 1)];
+    rMat[1][2] = d_origImg[x + 768 * (y - 1)];
+    rMat[2][2] = d_origImg[(x + 3) + 768 * (y + 1)];
   }
+
+  if (x == 3 && y == 1) {
+    int newR =
+        (rMat[0][0] * blurKernel[0][0]) + (rMat[1][0] * blurKernel[1][0]) +
+        (rMat[2][0] * blurKernel[2][0]) + (rMat[0][1] * blurKernel[0][1]) +
+        (rMat[1][1] * blurKernel[1][1]) + (rMat[2][1] * blurKernel[2][1]) +
+        (rMat[0][2] * blurKernel[0][2]) + (rMat[1][2] * blurKernel[1][2]) +
+        (rMat[2][2] * blurKernel[2][2]);
+    printf("Old R = %d, Calculated new R = %d\n", d_origImg[i], newR);
+  }
+
+  d_newImg[i] = d_origImg[i];         // R
+  d_newImg[i + 1] = d_origImg[i + 1]; // G
+  d_newImg[i + 2] = d_origImg[i + 2]; // B
 }
 
 __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
