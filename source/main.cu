@@ -5,54 +5,58 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "../include/stb_image_write.h"
 
+// Macro for checking cuda errors following a cuda launch or api call
+#define cudaCheckError()                                                       \
+  {                                                                            \
+    cudaError_t e = cudaGetLastError();                                        \
+    if (e != cudaSuccess) {                                                    \
+      printf("Cuda failure %s:%d: '%s'\n", __FILE__, __LINE__,                 \
+             cudaGetErrorString(e));                                           \
+      exit(0);                                                                 \
+    }                                                                          \
+  }
+
 __global__ void imgProcessingKernel(unsigned char *d_origImg,
                                     unsigned char *d_newImg) {
   // each thread will work on pixel value of the image, a pixel is represented
   // with 3 values R, G, and B
-  int i = blockIdx.x * blockDim.x + threadIdx.x;
-  if (i % 3 != 0) {
-    return;
-  }
+  int col = blockIdx.x * blockDim.x + threadIdx.x;
+  int row = blockIdx.y * blockDim.y + threadIdx.y;
 
   // gaussian blur kernel
   float blurKernel[3][3] = {{0.1111, 0.1111, 0.1111},
                             {0.1111, 0.1111, 0.1111},
                             {0.1111, 0.1111, 0.1111}};
 
-  int rMat[3][3];
-  int gMat[3][3];
-  int bMat[3][3];
-
-  // convert 1d to 2d coords
-  int x = i % 768;
-  int y = i / 768;
+  // matrix to hold neighbor values
+  int mat[3][3];
 
   // ignore edges
-  if (y != 0 && y != 255 && x != 0 && x != 765) {
-    rMat[0][0] = d_origImg[(x - 3) + 768 * (y - 1)];
-    rMat[1][0] = d_origImg[x + 768 * (y - 1)];
-    rMat[2][0] = d_origImg[(x + 3) + 768 * (y - 1)];
-    rMat[0][1] = d_origImg[(x - 3) + 768 * y];
-    rMat[1][1] = d_origImg[x + 768 * y];
-    rMat[2][1] = d_origImg[(x + 3) + 768 * y];
-    rMat[0][2] = d_origImg[(x - 3) + 768 * (y + 1)];
-    rMat[1][2] = d_origImg[x + 768 * (y - 1)];
-    rMat[2][2] = d_origImg[(x + 3) + 768 * (y + 1)];
+  if (row != 0 && row != 255 && col != 0 && col != 767) {
+    mat[0][0] = d_origImg[(col - 3) + 768 * (row - 1)];
+    mat[1][0] = d_origImg[col + 768 * (row - 1)];
+    mat[2][0] = d_origImg[(col + 3) + 768 * (row - 1)];
+    mat[0][1] = d_origImg[(col - 3) + 768 * row];
+    mat[1][1] = d_origImg[col + 768 * row];
+    mat[2][1] = d_origImg[(col + 3) + 768 * row];
+    mat[0][2] = d_origImg[(col - 3) + 768 * (row + 1)];
+    mat[1][2] = d_origImg[col + 768 * (row - 1)];
+    mat[2][2] = d_origImg[(col + 3) + 768 * (row + 1)];
   }
 
-  if (x == 3 && y == 1) {
-    int newR =
-        (rMat[0][0] * blurKernel[0][0]) + (rMat[1][0] * blurKernel[1][0]) +
-        (rMat[2][0] * blurKernel[2][0]) + (rMat[0][1] * blurKernel[0][1]) +
-        (rMat[1][1] * blurKernel[1][1]) + (rMat[2][1] * blurKernel[2][1]) +
-        (rMat[0][2] * blurKernel[0][2]) + (rMat[1][2] * blurKernel[1][2]) +
-        (rMat[2][2] * blurKernel[2][2]);
-    printf("Old R = %d, Calculated new R = %d\n", d_origImg[i], newR);
+  int newRGBValue =
+      (mat[0][0] * blurKernel[0][0]) + (mat[1][0] * blurKernel[1][0]) +
+      (mat[2][0] * blurKernel[2][0]) + (mat[0][1] * blurKernel[0][1]) +
+      (mat[1][1] * blurKernel[1][1]) + (mat[2][1] * blurKernel[2][1]) +
+      (mat[0][2] * blurKernel[0][2]) + (mat[1][2] * blurKernel[1][2]) +
+      (mat[2][2] * blurKernel[2][2]);
+
+  if (col == 589 && row == 209) {
+    printf("Old value = %d, Calculated new value = %d\n",
+           d_origImg[col + 768 * row], newRGBValue);
   }
 
-  d_newImg[i] = d_origImg[i];         // R
-  d_newImg[i + 1] = d_origImg[i + 1]; // G
-  d_newImg[i + 2] = d_origImg[i + 2]; // B
+  d_newImg[col + 768 * row] = newRGBValue; // r, g, or b value is copied
 }
 
 __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
@@ -69,13 +73,12 @@ __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
   // allocated on the device
   cudaMemcpy(d_origImg, h_origImg, imgSize, cudaMemcpyHostToDevice);
 
-  // max amount of threads in a block is 1024
-  dim3 threadsPerBlock(1024);
-  // calculate the amount of blocks needed
-  dim3 numBlocks(imgSize / 1024);
+  dim3 block(28, 28);
+  dim3 grid(28, 28);
 
   // perform image processing
-  imgProcessingKernel<<<numBlocks, threadsPerBlock>>>(d_origImg, d_newImg);
+  imgProcessingKernel<<<grid, block>>>(d_origImg, d_newImg);
+  cudaCheckError();
   cudaThreadSynchronize();
 
   // copy device image to host image
