@@ -28,6 +28,8 @@ __global__ void imgProcessingKernel(unsigned char *d_origImg,
                             {0.1111, 0.1111, 0.1111},
                             {0.1111, 0.1111, 0.1111}};
 
+  int edgeDetection[3][3] = {{1, 0, -1}, {0, 0, 0}, {-1, 0, 1}};
+
   // matrix to hold neighbor values
   int mat[3][3];
 
@@ -45,16 +47,11 @@ __global__ void imgProcessingKernel(unsigned char *d_origImg,
   }
 
   int newRGBValue =
-      (mat[0][0] * blurKernel[0][0]) + (mat[1][0] * blurKernel[1][0]) +
-      (mat[2][0] * blurKernel[2][0]) + (mat[0][1] * blurKernel[0][1]) +
-      (mat[1][1] * blurKernel[1][1]) + (mat[2][1] * blurKernel[2][1]) +
-      (mat[0][2] * blurKernel[0][2]) + (mat[1][2] * blurKernel[1][2]) +
-      (mat[2][2] * blurKernel[2][2]);
-
-  if (col == 589 && row == 209) {
-    printf("Old value = %d, Calculated new value = %d\n",
-           d_origImg[col + 768 * row], newRGBValue);
-  }
+      (mat[0][0] * edgeDetection[0][0]) + (mat[1][0] * edgeDetection[1][0]) +
+      (mat[2][0] * edgeDetection[2][0]) + (mat[0][1] * edgeDetection[0][1]) +
+      (mat[1][1] * edgeDetection[1][1]) + (mat[2][1] * edgeDetection[2][1]) +
+      (mat[0][2] * edgeDetection[0][2]) + (mat[1][2] * edgeDetection[1][2]) +
+      (mat[2][2] * edgeDetection[2][2]);
 
   d_newImg[col + 768 * row] = newRGBValue; // r, g, or b value is copied
 }
