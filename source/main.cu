@@ -5,6 +5,7 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "../include/stb_image_write.h"
 
+// https://gist.github.com/jefflarkin/5390993
 // Macro for checking cuda errors following a cuda launch or api call
 #define cudaCheckError()                                                       \
   {                                                                            \
@@ -20,38 +21,49 @@ __global__ void imgProcessingKernel(unsigned char *d_origImg,
                                     unsigned char *d_newImg) {
   // each thread will work on pixel value of the image, a pixel is represented
   // with 3 values R, G, and B
-  int col = blockIdx.x * blockDim.x + threadIdx.x;
-  int row = blockIdx.y * blockDim.y + threadIdx.y;
+  int col = (blockIdx.x * blockDim.x) + threadIdx.x;
+  int row = (blockIdx.y * blockDim.y) + threadIdx.y;
+
+  printf("col = %d, row = %d\n", col, row);
+
+  if (row == 0 || row == 255) {
+    return;
+  }
+
+  if (col == 0 || col == 767) {
+    return;
+  }
 
   // gaussian blur kernel
-  float blurKernel[3][3] = {{0.1111, 0.1111, 0.1111},
-                            {0.1111, 0.1111, 0.1111},
-                            {0.1111, 0.1111, 0.1111}};
+  int blurKernel[3][3] = {{1, 2, 1}, {2, 4, 2}, {1, 2, 1}};
 
-  int edgeDetection[3][3] = {{1, 0, -1}, {0, 0, 0}, {-1, 0, 1}};
+  // edge detection kernel
+  int edgeDetectionKernel[3][3] = {{1, 0, -1}, {0, 0, 0}, {-1, 0, 1}};
+
+  // emboss kernel
+  int embossKernel[3][3] = {{-2, -2, 0}, {-2, 6, 0}, {0, 0, 0}};
 
   // matrix to hold neighbor values
   int mat[3][3];
 
-  // ignore edges
-  if (row != 0 && row != 255 && col != 0 && col != 767) {
-    mat[0][0] = d_origImg[(col - 3) + 768 * (row - 1)];
-    mat[1][0] = d_origImg[col + 768 * (row - 1)];
-    mat[2][0] = d_origImg[(col + 3) + 768 * (row - 1)];
-    mat[0][1] = d_origImg[(col - 3) + 768 * row];
-    mat[1][1] = d_origImg[col + 768 * row];
-    mat[2][1] = d_origImg[(col + 3) + 768 * row];
-    mat[0][2] = d_origImg[(col - 3) + 768 * (row + 1)];
-    mat[1][2] = d_origImg[col + 768 * (row - 1)];
-    mat[2][2] = d_origImg[(col + 3) + 768 * (row + 1)];
-  }
+  // calculate neighbor values and put them in a matrix
+  mat[0][0] = d_origImg[(col - 3) + 768 * (row - 1)];
+  mat[1][0] = d_origImg[col + 768 * (row - 1)];
+  mat[2][0] = d_origImg[(col + 3) + 768 * (row - 1)];
+  mat[0][1] = d_origImg[(col - 3) + 768 * row];
+  mat[1][1] = d_origImg[col + 768 * row];
+  mat[2][1] = d_origImg[(col + 3) + 768 * row];
+  mat[0][2] = d_origImg[(col - 3) + 768 * (row + 1)];
+  mat[1][2] = d_origImg[col + 768 * (row - 1)];
+  mat[2][2] = d_origImg[(col + 3) + 768 * (row + 1)];
 
   int newRGBValue =
-      (mat[0][0] * edgeDetection[0][0]) + (mat[1][0] * edgeDetection[1][0]) +
-      (mat[2][0] * edgeDetection[2][0]) + (mat[0][1] * edgeDetection[0][1]) +
-      (mat[1][1] * edgeDetection[1][1]) + (mat[2][1] * edgeDetection[2][1]) +
-      (mat[0][2] * edgeDetection[0][2]) + (mat[1][2] * edgeDetection[1][2]) +
-      (mat[2][2] * edgeDetection[2][2]);
+      ((mat[0][0] * embossKernel[0][0]) + (mat[1][0] * embossKernel[1][0]) +
+       (mat[2][0] * embossKernel[2][0]) + (mat[0][1] * embossKernel[0][1]) +
+       (mat[1][1] * embossKernel[1][1]) + (mat[2][1] * embossKernel[2][1]) +
+       (mat[0][2] * embossKernel[0][2]) + (mat[1][2] * embossKernel[1][2]) +
+       (mat[2][2] * embossKernel[2][2])) /
+      2;
 
   d_newImg[col + 768 * row] = newRGBValue; // r, g, or b value is copied
 }
@@ -70,13 +82,16 @@ __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
   // allocated on the device
   cudaMemcpy(d_origImg, h_origImg, imgSize, cudaMemcpyHostToDevice);
 
-  dim3 block(28, 28);
-  dim3 grid(28, 28);
+  // 8 x 8 is 64 threads per block
+  dim3 threadsPerBlock(8, 8);
+  // 96 x 32 blocks or 3,072 blocks
+  dim3 numBlocks(768 / threadsPerBlock.x, 256 / threadsPerBlock.y);
 
-  // perform image processing
-  imgProcessingKernel<<<grid, block>>>(d_origImg, d_newImg);
-  cudaCheckError();
+  // perform image processing with 196,608 threads total, which is enough for a
+  // 768 x 256 array
+  imgProcessingKernel<<<numBlocks, threadsPerBlock>>>(d_origImg, d_newImg);
   cudaThreadSynchronize();
+  cudaCheckError();
 
   // copy device image to host image
   cudaMemcpy(h_newImg, d_newImg, imgSize, cudaMemcpyDeviceToHost);
