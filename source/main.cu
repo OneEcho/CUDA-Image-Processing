@@ -24,13 +24,7 @@ __global__ void imgProcessingKernel(unsigned char *d_origImg,
   int col = (blockIdx.x * blockDim.x) + threadIdx.x;
   int row = (blockIdx.y * blockDim.y) + threadIdx.y;
 
-  printf("col = %d, row = %d\n", col, row);
-
-  if (row == 0 || row == 255) {
-    return;
-  }
-
-  if (col == 0 || col == 767) {
+  if (row == 0 || row == 255 || col == 0 || col == 767) {
     return;
   }
 
@@ -41,7 +35,7 @@ __global__ void imgProcessingKernel(unsigned char *d_origImg,
   int edgeDetectionKernel[3][3] = {{1, 0, -1}, {0, 0, 0}, {-1, 0, 1}};
 
   // emboss kernel
-  int embossKernel[3][3] = {{-2, -2, 0}, {-2, 6, 0}, {0, 0, 0}};
+  int embossKernel[3][3] = {{-2, -1, 0}, {-1, 1, 1}, {0, 1, 2}};
 
   // matrix to hold neighbor values
   int mat[3][3];
@@ -54,16 +48,18 @@ __global__ void imgProcessingKernel(unsigned char *d_origImg,
   mat[1][1] = d_origImg[col + 768 * row];
   mat[2][1] = d_origImg[(col + 3) + 768 * row];
   mat[0][2] = d_origImg[(col - 3) + 768 * (row + 1)];
-  mat[1][2] = d_origImg[col + 768 * (row - 1)];
+  mat[1][2] = d_origImg[col + 768 * (row + 1)];
   mat[2][2] = d_origImg[(col + 3) + 768 * (row + 1)];
 
-  int newRGBValue =
-      ((mat[0][0] * embossKernel[0][0]) + (mat[1][0] * embossKernel[1][0]) +
-       (mat[2][0] * embossKernel[2][0]) + (mat[0][1] * embossKernel[0][1]) +
-       (mat[1][1] * embossKernel[1][1]) + (mat[2][1] * embossKernel[2][1]) +
-       (mat[0][2] * embossKernel[0][2]) + (mat[1][2] * embossKernel[1][2]) +
-       (mat[2][2] * embossKernel[2][2])) /
-      2;
+  int newRGBValue = (mat[0][0] * edgeDetectionKernel[0][0]) +
+                    (mat[1][0] * edgeDetectionKernel[1][0]) +
+                    (mat[2][0] * edgeDetectionKernel[2][0]) +
+                    (mat[0][1] * edgeDetectionKernel[0][1]) +
+                    (mat[1][1] * edgeDetectionKernel[1][1]) +
+                    (mat[2][1] * edgeDetectionKernel[2][1]) +
+                    (mat[0][2] * edgeDetectionKernel[0][2]) +
+                    (mat[1][2] * edgeDetectionKernel[1][2]) +
+                    (mat[2][2] * edgeDetectionKernel[2][2]);
 
   d_newImg[col + 768 * row] = newRGBValue; // r, g, or b value is copied
 }
@@ -99,7 +95,7 @@ __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
   cudaFree(d_newImg);
 }
 
-const char *IMG_PATH = "images/shell.jpg";
+const char *IMG_PATH = "images/dogandperson.jpeg";
 
 int main() {
 
@@ -129,8 +125,8 @@ int main() {
   cudaDeviceSynchronize();
 
   // create the new image
-  stbi_write_jpg("images/shell-copy.jpg", imgWidth, imgHeight, imgChannels,
-                 h_newImg, 100);
+  stbi_write_jpg("images/dogandperson-copy.jpg", imgWidth, imgHeight,
+                 imgChannels, h_newImg, 100);
 
   stbi_image_free(h_origImg);
   free(h_newImg);
