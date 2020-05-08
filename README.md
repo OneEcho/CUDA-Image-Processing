@@ -10,7 +10,7 @@ Here are the steps to compile and execute:
 4. Run the executable file named "imageproc.exe"
 5. There is now a new image named "dogandperson-copy.jpg" in the images folder. This the new image after the convolution was done.
 
-TODO:
+## TODO:
 * Implement a CLI
 * Use different types of images other than .jpg
 * Implement different image convolution kernels
