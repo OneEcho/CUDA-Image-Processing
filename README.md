@@ -20,6 +20,6 @@ Here are the steps to compile and execute:
 ## Examples:
 
 ![Original Image](images/dogandperson.jpeg)
-*Original Image*
+\nOriginal Image
 ![New Image after Edge Detection Kernel applied](images/edge_detection.jpg)
-*New Image after Edge Detection Kernel applied*
+\nNew Image after Edge Detection Kernel applied
