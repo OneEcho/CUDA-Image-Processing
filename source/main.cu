@@ -95,15 +95,23 @@ __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
   cudaFree(d_newImg);
 }
 
-const char *IMG_PATH = "images/dogandperson.jpeg";
-
-int main() {
+int main(int argc, char ** argv) {
 
   int imgWidth, imgHeight, imgChannels;
 
+  char *imgPath, *newImagePath;
+
+  if(argc < 3) {
+    printf("Not enough arguments provided. Please provide the path to a image and a path for the newly created image.\n");
+    exit(1);
+  } else {
+    imgPath = argv[1];
+    newImagePath = argv[2];
+  }
+
   // allocate memory for original image on host
   unsigned char *h_origImg =
-      stbi_load(IMG_PATH, &imgWidth, &imgHeight, &imgChannels, 0);
+      stbi_load(imgPath, &imgWidth, &imgHeight, &imgChannels, 0);
   if (h_origImg == NULL) {
     printf("Error in loading the image\n");
     exit(1);
@@ -125,7 +133,7 @@ int main() {
   cudaDeviceSynchronize();
 
   // create the new image
-  stbi_write_jpg("images/dogandperson-copy.jpg", imgWidth, imgHeight,
+  stbi_write_jpg(newImagePath, imgWidth, imgHeight,
                  imgChannels, h_newImg, 100);
 
   stbi_image_free(h_origImg);
