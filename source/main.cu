@@ -95,7 +95,7 @@ __host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
   cudaFree(d_newImg);
 }
 
-const char *IMG_PATH = "dogandperson.jpeg";
+const char *IMG_PATH = "images/dogandperson.jpeg";
 
 int main() {
 
