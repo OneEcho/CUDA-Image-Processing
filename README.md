@@ -15,3 +15,9 @@ Here are the steps to compile and execute:
 * Implement different image convolution kernels
 * Refactor image conversion implementation
 * Expand CLI
+
+
+## Examples:
+
+![Original Image](images/dogandperson.jpeg)
+![New Image after Edge Detection Kernel applied](images/edge_detection.jpg)
