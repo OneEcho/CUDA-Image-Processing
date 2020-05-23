@@ -4,17 +4,17 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/noynac/Dev/C++/CUDA-Image-Processing
-BuildDirectory: /home/noynac/Dev/C++/CUDA-Image-Processing/build
+SourceDirectory: C:/Users/cucam/Desktop/CUDA-Image-Processing
+BuildDirectory: C:/Users/cucam/Desktop/CUDA-Image-Processing/build
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: grand-manjaro
+Site: DESKTOP-4USJT1M
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Linux-g++
+BuildName: Win32-MSBuild
 
 # Subprojects
 LabelsForSubprojects: 
@@ -26,8 +26,8 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/noynac/Dev/C++/CUDA-Image-Processing"
-MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
+ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Users/cucam/Desktop/CUDA-Image-Processing"
+MakeCommand: "C:\Program Files\CMake\bin\cmake.exe" --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -39,12 +39,12 @@ CVSCommand: CVSCOMMAND-NOTFOUND
 CVSUpdateOptions: -d -A -P
 
 # Subversion options
-SVNCommand: /usr/bin/svn
+SVNCommand: SVNCOMMAND-NOTFOUND
 SVNOptions: 
 SVNUpdateOptions: 
 
 # Git options
-GITCommand: /usr/bin/git
+GITCommand: C:/Program Files/Git/cmd/git.exe
 GITInitSubmodules: 
 GITUpdateOptions: 
 GITUpdateCustom: 
@@ -57,13 +57,13 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: /usr/bin/git
+UpdateCommand: C:/Program Files/Git/cmd/git.exe
 UpdateOptions: 
 UpdateType: git
 
 # Compiler info
-Compiler: /bin/g++
-CompilerVersion: 9.3.0
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.25.28610/bin/Hostx64/x64/cl.exe
+CompilerVersion: 19.25.28612.0
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
@@ -78,7 +78,7 @@ MemoryCheckCommandOptions:
 MemoryCheckSuppressionFile: 
 
 # Coverage
-CoverageCommand: /usr/bin/gcov
+CoverageCommand: COVERAGE_COMMAND-NOTFOUND
 CoverageExtraFlags: -l
 
 # Cluster commands
@@ -96,7 +96,7 @@ TimeOut: 1500
 # so would cause the system load to exceed this value.
 TestLoad: 
 
-UseLaunchers: 
+UseLaunchers: 0
 CurlOptions: 
 # warning, if you add new options here that have to do with submit,
 # you have to update cmCTestSubmitCommand.cxx

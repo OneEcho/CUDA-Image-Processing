@@ -7,7 +7,8 @@ enable_language(CUDA)
 
 add_executable(cuda-image-processing source/main.cu)
 
-set_property(TARGET foo PROPERTY CUDA_STANDARD 11)
+set_property(TARGET cuda-image-processing PROPERTY CUDA_STANDARD 11)
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+
 include(CPack)

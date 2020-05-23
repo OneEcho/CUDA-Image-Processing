@@ -1,1 +1,0 @@
-/bin/g++  -g  -rdynamic CMakeFiles/cuda-image-processing.dir/main.cpp.o  -o cuda-image-processing 
