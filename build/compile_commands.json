@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/noynac/Dev/C++/CUDA-Image-Processing/build",
+  "command": "/bin/g++    -g   -o CMakeFiles/cuda-image-processing.dir/main.cpp.o -c /home/noynac/Dev/C++/CUDA-Image-Processing/main.cpp",
+  "file": "/home/noynac/Dev/C++/CUDA-Image-Processing/main.cpp"
+}
+]
