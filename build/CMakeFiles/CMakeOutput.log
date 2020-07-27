@@ -1,298 +1,768 @@
-The system is: Windows - 10.0.18363 - AMD64
-Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler:  
-Build flags: 
-Id flags:  
-
-The output was:
-0
-Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 5/23/2020 3:04:39 AM.
-Project "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "Debug\".
-  Creating directory "Debug\CompilerIdC.tlog\".
-InitializeBuildStatus:
-  Creating "Debug\CompilerIdC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
-  CMakeCCompilerId.c
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdC\.\CompilerIdC.exe
-PostBuildEvent:
-  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
-  :VCEnd
-  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\Hostx64\x64\cl.exe
-FinalizeBuildStatus:
-  Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
-  Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Done Building Project "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:00.64
-
-
-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
-
-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
-
-The C compiler identification is MSVC, found in "C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/3.17.2/CompilerIdC/CompilerIdC.exe"
-
+The system is: Linux - 4.19.0-9-amd64 - x86_64
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler:  
+Compiler: /usr/bin/c++ 
 Build flags: 
 Id flags:  
 
 The output was:
 0
-Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 5/23/2020 3:04:39 AM.
-Project "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "Debug\".
-  Creating directory "Debug\CompilerIdCXX.tlog\".
-InitializeBuildStatus:
-  Creating "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
-  CMakeCXXCompilerId.cpp
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCXX\.\CompilerIdCXX.exe
-PostBuildEvent:
-  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
-  :VCEnd
-  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\Hostx64\x64\cl.exe
-FinalizeBuildStatus:
-  Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
-  Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Done Building Project "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:00.63
 
 
-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
-
-The CXX compiler identification is MSVC, found in "C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/3.17.2/CompilerIdCXX/CompilerIdCXX.exe"
-
-Determining if the C compiler works passed with the following output:
-Change Dir: C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_2cf0a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.25.28612 for x64
-  testCCompiler.c
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2cf0a.dir\Debug\\" /Fd"cmTC_2cf0a.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\testCCompiler.c"
-  cmTC_2cf0a.vcxproj -> C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\Debug\cmTC_2cf0a.exe
-
-
-
-Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_88d27.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.25.28612 for x64
-  CMakeCCompilerABI.c
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_88d27.dir\Debug\\" /Fd"cmTC_88d27.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCCompilerABI.c"
-  cmTC_88d27.vcxproj -> C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\Debug\cmTC_88d27.exe
-
-
-
-Determining if the CXX compiler works passed with the following output:
-Change Dir: C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_8ce3e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.25.28612 for x64
-  testCXXCompiler.cxx
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_8ce3e.dir\Debug\\" /Fd"cmTC_8ce3e.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
-  cmTC_8ce3e.vcxproj -> C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\Debug\cmTC_8ce3e.exe
-
-
-
-Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
-
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_4b582.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.25.28612 for x64
-  CMakeCXXCompilerABI.cpp
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4b582.dir\Debug\\" /Fd"cmTC_4b582.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_4b582.vcxproj -> C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\Debug\cmTC_4b582.exe
-
-
+The CXX compiler identification is GNU, found in "/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/3.13.4/CompilerIdCXX/a.out"
 
 Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
-Compiler:  
+Compiler: /usr/bin/nvcc 
 Build flags: 
 Id flags:  -v;--keep;--keep-dir;tmp
 
 The output was:
 0
-Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 5/23/2020 3:04:44 AM.
-Project "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "Debug\".
-  Creating directory "Debug\CompilerIdCUDA.tlog\".
-InitializeBuildStatus:
-  Creating "Debug\CompilerIdCUDA.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-AddCudaCompileDeps:
-  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include" /I. /FIcuda_runtime.h /c C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCUDA\CMakeCUDACompilerId.cu 
-Project "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" (1) is building "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" (1:2) on node 1 (CudaBuildCore target(s)).
-CudaBuildCore:
-  Compiling CUDA source file CMakeCUDACompilerId.cu...
-  cmd.exe /C "C:\Users\cucam\AppData\Local\Temp\tmpe2ef4002f9b743eeb001f18c50799000.cmd"
-  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -v -g   -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FdDebug\vc142.pdb /FS /Zi /RTC1 /MDd " -o Debug\CMakeCUDACompilerId.cu.obj "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCUDA\CMakeCUDACompilerId.cu"
-  
-  C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCUDA>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -v -g   -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FdDebug\vc142.pdb /FS /Zi /RTC1 /MDd " -o Debug\CMakeCUDACompilerId.cu.obj "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCUDA\CMakeCUDACompilerId.cu" 
-  #$ _NVVM_BRANCH_=nvvm
-  #$ _SPACE_= 
-  #$ _CUDART_=cudart
-  #$ _HERE_=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin
-  #$ _THERE_=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin
-  #$ _TARGET_SIZE_=
-  #$ _TARGET_DIR_=
-  #$ _TARGET_SIZE_=64
-  #$ _WIN_PLATFORM_=x64
-  #$ TOP=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin/..
-  #$ NVVMIR_LIBRARY_DIR=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin/../nvvm/libdevice
-  #$ PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin/../nvvm/bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin/../lib;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\VC\VCPackages;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\bin\Roslyn;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Team Tools\Performance Tools\x64;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Team Tools\Performance Tools;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\\x64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\vs2019\;C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x64;C:\Program Files (x86)\Windows Kits\10\bin\x64;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\\MSBuild\Current\Bin;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\libnvvp;;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.5.0\;C:\Users\cucam\AppData\Local\Microsoft\WindowsApps;;C:\Users\cucam\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;
-  #$ INCLUDES="-IC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin/../include"  
-  #$ LIBRARIES=  "/LIBPATH:C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin/../lib/x64"
-  #$ CUDAFE_FLAGS=--sdk_dir "C:\Program Files (x86)\Windows Kits\10"
-  #$ PTXAS_FLAGS=
-  CMakeCUDACompilerId.cu
-  #$ cl.exe @"C:\Users\cucam\AppData\Local\Temp/tmpxft_00003150_00000000-8.res" > "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-7_CMakeCUDACompilerId.cpp1.ii" 
-  CMakeCUDACompilerId.cu
-  #$ erase C:\Users\cucam\AppData\Local\Temp/tmpxft_00003150_00000000-8.res
-  #$ cicc --microsoft_version=1925 --msvc_target_version=1925 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.25.28610/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --allow_managed --debug_mode --sdk_dir "C:\Program Files (x86)\Windows Kits\10"  -arch compute_30 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "tmpxft_00003150_00000000-3_CMakeCUDACompilerId.fatbin.c" -g -O0 -tused -nvvmir-library "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin/../nvvm/libdevice/libdevice.10.bc" --gen_module_id_file --module_id_file_name "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-4_CMakeCUDACompilerId.module_id" --orig_src_file_name "C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/3.17.2/CompilerIdCUDA/CMakeCUDACompilerId.cu" --gen_c_file_name "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-6_CMakeCUDACompilerId.cudafe1.c" --stub_file_name "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-6_CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-6_CMakeCUDACompilerId.cudafe1.gpu"  "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-7_CMakeCUDACompilerId.cpp1.ii" -o "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-6_CMakeCUDACompilerId.ptx"
-  #$ ptxas -arch=sm_30 -m64 -g --dont-merge-basicblocks --return-at-end "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-6_CMakeCUDACompilerId.ptx"  -o "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-9_CMakeCUDACompilerId.sm_30.cubin" 
-  #$ fatbinary -64 --ident="C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/3.17.2/CompilerIdCUDA/CMakeCUDACompilerId.cu" --cmdline="-g --dont-merge-basicblocks --return-at-end " --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -g "--image3=kind=elf,sm=30,file=C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-9_CMakeCUDACompilerId.sm_30.cubin" "--image3=kind=ptx,sm=30,file=C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-6_CMakeCUDACompilerId.ptx" --embedded-fatbin="C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-3_CMakeCUDACompilerId.fatbin.c" 
-  #$ erase C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-3_CMakeCUDACompilerId.fatbin
-  #$ cl.exe @"C:\Users\cucam\AppData\Local\Temp/tmpxft_00003150_00000000-10.res" > "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-5_CMakeCUDACompilerId.cpp4.ii" 
-  CMakeCUDACompilerId.cu
-  #$ erase C:\Users\cucam\AppData\Local\Temp/tmpxft_00003150_00000000-10.res
-  #$ cudafe++ --microsoft_version=1925 --msvc_target_version=1925 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.25.28610/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --allow_managed --debug_mode --sdk_dir "C:\Program Files (x86)\Windows Kits\10" --m64 --parse_templates --gen_c_file_name "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-6_CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "tmpxft_00003150_00000000-6_CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-4_CMakeCUDACompilerId.module_id" "C:/Users/cucam/AppData/Local/Temp/tmpxft_00003150_00000000-5_CMakeCUDACompilerId.cpp4.ii" 
-  #$ cl.exe @"C:\Users\cucam\AppData\Local\Temp/tmpxft_00003150_00000000-11.res" -Fo"Debug/CMakeCUDACompilerId.cu.obj" 
-  tmpxft_00003150_00000000-6_CMakeCUDACompilerId.cudafe1.cpp
-  #$ erase C:\Users\cucam\AppData\Local\Temp/tmpxft_00003150_00000000-11.res
-Done Building Project "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" (CudaBuildCore target(s)).
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64" cudart.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCUDA.lib" /MACHINE:X64 Debug\CMakeCUDACompilerId.cu.obj
-  CompilerIdCUDA.vcxproj -> C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCUDA\.\CompilerIdCUDA.exe
-PostBuildEvent:
-  echo CMAKE_CUDA_COMPILER=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe
-  :VCEnd
-  CMAKE_CUDA_COMPILER=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe
-FinalizeBuildStatus:
-  Deleting file "Debug\CompilerIdCUDA.tlog\unsuccessfulbuild".
-  Touching "Debug\CompilerIdCUDA.tlog\CompilerIdCUDA.lastbuildstate".
-Done Building Project "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\3.17.2\CompilerIdCUDA\CompilerIdCUDA.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.47
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/usr/lib/nvidia-cuda-toolkit/bin
+#$ _THERE_=/usr/lib/nvidia-cuda-toolkit/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ NVVMIR_LIBRARY_DIR=/usr/lib/nvidia-cuda-toolkit/libdevice
+#$ PATH=/usr/lib/nvidia-cuda-toolkit/bin:/home/Canyon/.emacs.d/bin:/home/Canyon/.emacs.d/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/sbin:/usr/sbin
+#$ LIBRARIES=  -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu
+#$ rm tmp/a_dlink.reg.c
+#$ gcc -D__CUDA_ARCH__=300 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp1.ii" 
+#$ cicc --c++14 --gnu_version=80300 --allow_managed  -arch compute_30 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused -nvvmir-library "/usr/lib/nvidia-cuda-toolkit/libdevice/libdevice.10.bc" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --orig_src_file_name "CMakeCUDACompilerId.cu" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"
+#$ ptxas -arch=sm_30 -m64 "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_30.cubin" 
+#$ fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cmdline="" "--image=profile=sm_30,file=tmp/CMakeCUDACompilerId.sm_30.cubin" "--image=profile=compute_30,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" 
+#$ gcc -E -x c++ -D__CUDACC__ -D__NVCC__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp4.ii" 
+#$ cudafe++ --c++14 --gnu_version=80300 --allow_managed --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" 
+#$ gcc -D__CUDA_ARCH__=300 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -m64 -o "tmp/CMakeCUDACompilerId.o" "tmp/CMakeCUDACompilerId.cudafe1.cpp" 
+#$ nvlink --arch=sm_30 --register-link-binaries="tmp/a_dlink.reg.c"  -m64   -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -o "tmp/a_dlink.sm_30.cubin"
+#$ fatbinary --create="tmp/a_dlink.fatbin" -64 --cmdline="" -link "--image=profile=sm_30,file=tmp/a_dlink.sm_30.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" 
+#$ gcc -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -m64 -o "tmp/a_dlink.o" "/usr/lib/nvidia-cuda-toolkit/bin/crt/link.stub" 
+#$ g++ -m64 -o "a.out" -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group 
 
 
-Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.exe"
+Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.out"
 
-Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.vcxproj"
+The CUDA compiler identification is NVIDIA, found in "/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/3.13.4/CompilerIdCUDA/a.out"
 
-The CUDA compiler identification is NVIDIA, found in "C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/3.17.2/CompilerIdCUDA/CompilerIdCUDA.exe"
+Parsed CUDA nvcc implicit link information from above output:
+  found 'PATH=' string: [/usr/lib/nvidia-cuda-toolkit/bin:/home/Canyon/.emacs.d/bin:/home/Canyon/.emacs.d/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/sbin:/usr/sbin]
+  found 'LIBRARIES=' string: [-L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu]
+  considering line: [#$ rm tmp/a_dlink.reg.c]
+  considering line: [gcc -D__CUDA_ARCH__=300 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+  considering line: [cicc --c++14 --gnu_version=80300 --allow_managed  -arch compute_30 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused -nvvmir-library "/usr/lib/nvidia-cuda-toolkit/libdevice/libdevice.10.bc" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --orig_src_file_name "CMakeCUDACompilerId.cu" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+  considering line: [ptxas -arch=sm_30 -m64 "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_30.cubin" ]
+  considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cmdline="" "--image=profile=sm_30,file=tmp/CMakeCUDACompilerId.sm_30.cubin" "--image=profile=compute_30,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+  considering line: [gcc -E -x c++ -D__CUDACC__ -D__NVCC__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [cudafe++ --c++14 --gnu_version=80300 --allow_managed --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [gcc -D__CUDA_ARCH__=300 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -m64 -o "tmp/CMakeCUDACompilerId.o" "tmp/CMakeCUDACompilerId.cudafe1.cpp" ]
+  considering line: [nvlink --arch=sm_30 --register-link-binaries="tmp/a_dlink.reg.c"  -m64   -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -o "tmp/a_dlink.sm_30.cubin"]
+    ignoring nvlink line
+  considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cmdline="" -link "--image=profile=sm_30,file=tmp/a_dlink.sm_30.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+  considering line: [gcc -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -m64 -o "tmp/a_dlink.o" "/usr/lib/nvidia-cuda-toolkit/bin/crt/link.stub" ]
+  considering line: [g++ -m64 -o "a.out" -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group ]
+    extracted link line: [g++ -m64 -o "a.out" -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group ]
+  considering line: []
+  extracted link launcher name: [g++]
+  found link launcher absolute path: [/usr/lib/nvidia-cuda-toolkit/bin/g++]
 
-Parsed CUDA nvcc include information from above output:
-  found 'INCLUDES=' string: ["-IC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin/../include"  ]
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line: [cuda-fake-ld g++ -m64 -o "a.out" -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group ]
+    arg [cuda-fake-ld] ==> ignore
+    arg [g++] ==> ignore
+    arg [-m64] ==> ignore
+    arg [-o] ==> ignore
+    arg [a.out] ==> ignore
+    arg [-Wl,--start-group] ==> ignore
+    arg [tmp/a_dlink.o] ==> ignore
+    arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+    arg [-L/usr/lib/x86_64-linux-gnu/stubs] ==> dir [/usr/lib/x86_64-linux-gnu/stubs]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-lcudadevrt] ==> lib [cudadevrt]
+    arg [-lcudart_static] ==> lib [cudart_static]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ldl] ==> lib [dl]
+    arg [-Wl,--end-group] ==> ignore
+  collapse library dir [/usr/lib/x86_64-linux-gnu/stubs] ==> [/usr/lib/x86_64-linux-gnu/stubs]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+  implicit dirs: [/usr/lib/x86_64-linux-gnu/stubs;/usr/lib/x86_64-linux-gnu]
+  implicit fwks: []
+
+
+Failed to detect CUDA nvcc include information:
+  found 'PATH=' string: [/usr/lib/nvidia-cuda-toolkit/bin:/home/Canyon/.emacs.d/bin:/home/Canyon/.emacs.d/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/sbin:/usr/sbin]
+  found 'LIBRARIES=' string: [-L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu]
+  considering line: [#$ rm tmp/a_dlink.reg.c]
+  considering line: [gcc -D__CUDA_ARCH__=300 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+  considering line: [cicc --c++14 --gnu_version=80300 --allow_managed  -arch compute_30 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused -nvvmir-library "/usr/lib/nvidia-cuda-toolkit/libdevice/libdevice.10.bc" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --orig_src_file_name "CMakeCUDACompilerId.cu" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+  considering line: [ptxas -arch=sm_30 -m64 "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_30.cubin" ]
+  considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cmdline="" "--image=profile=sm_30,file=tmp/CMakeCUDACompilerId.sm_30.cubin" "--image=profile=compute_30,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+  considering line: [gcc -E -x c++ -D__CUDACC__ -D__NVCC__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [cudafe++ --c++14 --gnu_version=80300 --allow_managed --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+  considering line: [gcc -D__CUDA_ARCH__=300 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -m64 -o "tmp/CMakeCUDACompilerId.o" "tmp/CMakeCUDACompilerId.cudafe1.cpp" ]
+  considering line: [nvlink --arch=sm_30 --register-link-binaries="tmp/a_dlink.reg.c"  -m64   -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -o "tmp/a_dlink.sm_30.cubin"]
+    ignoring nvlink line
+  considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cmdline="" -link "--image=profile=sm_30,file=tmp/a_dlink.sm_30.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+  considering line: [gcc -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -m64 -o "tmp/a_dlink.o" "/usr/lib/nvidia-cuda-toolkit/bin/crt/link.stub" ]
+  considering line: [g++ -m64 -o "a.out" -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group ]
+    extracted link line: [g++ -m64 -o "a.out" -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group ]
+  considering line: []
+  extracted link launcher name: [g++]
+  found link launcher absolute path: [/usr/lib/nvidia-cuda-toolkit/bin/g++]
+  no 'INCLUDES=' string found in nvcc output:
+    #$ _SPACE_= 
+    #$ _CUDART_=cudart
+    #$ _HERE_=/usr/lib/nvidia-cuda-toolkit/bin
+    #$ _THERE_=/usr/lib/nvidia-cuda-toolkit/bin
+    #$ _TARGET_SIZE_=
+    #$ _TARGET_DIR_=
+    #$ _TARGET_SIZE_=64
+    #$ NVVMIR_LIBRARY_DIR=/usr/lib/nvidia-cuda-toolkit/libdevice
+    #$ PATH=/usr/lib/nvidia-cuda-toolkit/bin:/home/Canyon/.emacs.d/bin:/home/Canyon/.emacs.d/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/sbin:/usr/sbin
+    #$ LIBRARIES=  -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu
+    #$ rm tmp/a_dlink.reg.c
+    #$ gcc -D__CUDA_ARCH__=300 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp1.ii" 
+    #$ cicc --c++14 --gnu_version=80300 --allow_managed  -arch compute_30 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused -nvvmir-library "/usr/lib/nvidia-cuda-toolkit/libdevice/libdevice.10.bc" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --orig_src_file_name "CMakeCUDACompilerId.cu" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"
+    #$ ptxas -arch=sm_30 -m64 "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_30.cubin" 
+    #$ fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cmdline="" "--image=profile=sm_30,file=tmp/CMakeCUDACompilerId.sm_30.cubin" "--image=profile=compute_30,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" 
+    #$ gcc -E -x c++ -D__CUDACC__ -D__NVCC__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp4.ii" 
+    #$ cudafe++ --c++14 --gnu_version=80300 --allow_managed --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" 
+    #$ gcc -D__CUDA_ARCH__=300 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -m64 -o "tmp/CMakeCUDACompilerId.o" "tmp/CMakeCUDACompilerId.cudafe1.cpp" 
+    #$ nvlink --arch=sm_30 --register-link-binaries="tmp/a_dlink.reg.c"  -m64   -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -o "tmp/a_dlink.sm_30.cubin"
+    #$ fatbinary --create="tmp/a_dlink.fatbin" -64 --cmdline="" -link "--image=profile=sm_30,file=tmp/a_dlink.sm_30.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" 
+    #$ gcc -c -x c++ -DFATBINFILE="\"tmp/a_dlink.fatbin.c\"" -DREGISTERLINKBINARYFILE="\"tmp/a_dlink.reg.c\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__   -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=1 -D__CUDACC_VER_BUILD__=243 -m64 -o "tmp/a_dlink.o" "/usr/lib/nvidia-cuda-toolkit/bin/crt/link.stub" 
+    #$ g++ -m64 -o "a.out" -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group 
+    
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9ab2c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9ab2c.dir/build.make CMakeFiles/cmTC_9ab2c.dir/build
+make[1]: Entering directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9ab2c.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_9ab2c.dir/testCXXCompiler.cxx.o -c /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_9ab2c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ab2c.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_9ab2c.dir/testCXXCompiler.cxx.o  -o cmTC_9ab2c 
+make[1]: Leaving directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_be51a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_be51a.dir/build.make CMakeFiles/cmTC_be51a.dir/build
+make[1]: Entering directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_be51a.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_be51a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_be51a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be51a.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_be51a.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_be51a 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Debian 8.3.0-6' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 8.3.0 (Debian 8.3.0-6) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_be51a' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpBTfYK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_be51a /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_be51a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_be51a' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_be51a/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_be51a.dir/build.make CMakeFiles/cmTC_be51a.dir/build]
+  ignore line: [make[1]: Entering directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_be51a.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_be51a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_be51a]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be51a.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_be51a.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_be51a ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 8.3.0-6' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (Debian 8.3.0-6) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_be51a' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpBTfYK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_be51a /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_be51a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccpBTfYK.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_be51a] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..]
+    arg [CMakeFiles/cmTC_be51a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8] ==> [/usr/lib/gcc/x86_64-linux-gnu/8]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/8;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
 
 
 
+
+Detecting CXX [-std=c++2a] compiler features compiled with the following output:
+Change Dir: /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ee220/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ee220.dir/build.make CMakeFiles/cmTC_ee220.dir/build
+make[1]: Entering directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ee220.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++2a -o CMakeFiles/cmTC_ee220.dir/feature_tests.cxx.o -c /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_ee220
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee220.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_ee220.dir/feature_tests.cxx.o  -o cmTC_ee220 
+make[1]: Leaving directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++17] compiler features compiled with the following output:
+Change Dir: /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f20cb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f20cb.dir/build.make CMakeFiles/cmTC_f20cb.dir/build
+make[1]: Entering directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f20cb.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++17 -o CMakeFiles/cmTC_f20cb.dir/feature_tests.cxx.o -c /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f20cb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f20cb.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_f20cb.dir/feature_tests.cxx.o  -o cmTC_f20cb 
+make[1]: Leaving directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_34d2c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_34d2c.dir/build.make CMakeFiles/cmTC_34d2c.dir/build
+make[1]: Entering directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_34d2c.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_34d2c.dir/feature_tests.cxx.o -c /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_34d2c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34d2c.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_34d2c.dir/feature_tests.cxx.o  -o cmTC_34d2c 
+make[1]: Leaving directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b40f4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b40f4.dir/build.make CMakeFiles/cmTC_b40f4.dir/build
+make[1]: Entering directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b40f4.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_b40f4.dir/feature_tests.cxx.o -c /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b40f4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b40f4.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_b40f4.dir/feature_tests.cxx.o  -o cmTC_b40f4 
+make[1]: Leaving directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e92b9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e92b9.dir/build.make CMakeFiles/cmTC_e92b9.dir/build
+make[1]: Entering directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e92b9.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_e92b9.dir/feature_tests.cxx.o -c /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_e92b9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e92b9.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_e92b9.dir/feature_tests.cxx.o  -o cmTC_e92b9 
+make[1]: Leaving directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the CUDA compiler works passed with the following output:
-Change Dir: C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
+Change Dir: /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_73d03.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-  Compiling CUDA source file main.cu...
-  
-  C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include"     --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FdcmTC_73d03.dir\Debug\vc142.pdb /FS /Zi /RTC1 /MDd /GR" -o cmTC_73d03.dir\Debug\main.obj "C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\main.cu" 
-  main.cu
-     Creating library C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp/Debug/cmTC_73d03.lib and object C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp/Debug/cmTC_73d03.exp
-  cmTC_73d03.vcxproj -> C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\Debug\cmTC_73d03.exe
-
+Run Build Command:"/usr/bin/make" "cmTC_4ee06/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4ee06.dir/build.make CMakeFiles/cmTC_4ee06.dir/build
+make[1]: Entering directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_4ee06.dir/main.cu.o
+/usr/bin/nvcc     -x cu -c /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp/main.cu -o CMakeFiles/cmTC_4ee06.dir/main.cu.o
+Linking CUDA device code CMakeFiles/cmTC_4ee06.dir/cmake_device_link.o
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ee06.dir/dlink.txt --verbose=1
+/usr/bin/nvcc    -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_4ee06.dir/main.cu.o -o CMakeFiles/cmTC_4ee06.dir/cmake_device_link.o 
+Linking CUDA executable cmTC_4ee06
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ee06.dir/link.txt --verbose=1
+/usr/lib/nvidia-cuda-toolkit/bin/g++   CMakeFiles/cmTC_4ee06.dir/main.cu.o CMakeFiles/cmTC_4ee06.dir/cmake_device_link.o -o cmTC_4ee06  -L"/usr/lib/x86_64-linux-gnu/stubs" -L"/usr/lib/x86_64-linux-gnu" -lcudadevrt -lcudart_static -lrt -lpthread -ldl
+make[1]: Leaving directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CUDA compiler ABI info compiled with the following output:
-Change Dir: C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
+Change Dir: /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_e24e0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-  Compiling CUDA source file ..\..\..\..\..\..\..\Program Files\CMake\share\cmake-3.17\Modules\CMakeCUDACompilerABI.cu...
-  
-  C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include"     --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0 -v" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FdcmTC_e24e0.dir\Debug\vc142.pdb /FS /Zi /RTC1 /MDd /GR" -o cmTC_e24e0.dir\Debug\CMakeCUDACompilerABI.obj "C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCUDACompilerABI.cu" 
-cl : Command line warning D9002: ignoring unknown option '-v' [C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\cmTC_e24e0.vcxproj]
-cl : Command line warning D9002: ignoring unknown option '-v' [C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\cmTC_e24e0.vcxproj]
-  CMakeCUDACompilerABI.cu
-cl : Command line warning D9002: ignoring unknown option '-v' [C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\cmTC_e24e0.vcxproj]
-LINK : warning LNK4044: unrecognized option '/v'; ignored [C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\cmTC_e24e0.vcxproj]
-     Creating library C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp/Debug/cmTC_e24e0.lib and object C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp/Debug/cmTC_e24e0.exp
-  cmTC_e24e0.vcxproj -> C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\Debug\cmTC_e24e0.exe
-
-
-
-Parsed CUDA implicit include dir info from above output: rv=start
-  warn: unable to parse implicit include dirs!
+Run Build Command:"/usr/bin/make" "cmTC_e1fa1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e1fa1.dir/build.make CMakeFiles/cmTC_e1fa1.dir/build
+make[1]: Entering directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_e1fa1.dir/CMakeCUDACompilerABI.cu.o
+/usr/bin/nvcc     -x cu -c /usr/share/cmake-3.13/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_e1fa1.dir/CMakeCUDACompilerABI.cu.o
+Linking CUDA device code CMakeFiles/cmTC_e1fa1.dir/cmake_device_link.o
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1fa1.dir/dlink.txt --verbose=1
+/usr/bin/nvcc    -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_e1fa1.dir/CMakeCUDACompilerABI.cu.o -o CMakeFiles/cmTC_e1fa1.dir/cmake_device_link.o 
+Linking CUDA executable cmTC_e1fa1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1fa1.dir/link.txt --verbose=1
+/usr/lib/nvidia-cuda-toolkit/bin/g++  -v CMakeFiles/cmTC_e1fa1.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_e1fa1.dir/cmake_device_link.o -o cmTC_e1fa1  -L"/usr/lib/x86_64-linux-gnu/stubs" -L"/usr/lib/x86_64-linux-gnu" -lcudadevrt -lcudart_static -lrt -lpthread -ldl
+Using built-in specs.
+COLLECT_GCC=g++-8
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Debian 8.3.0-6' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 8.3.0 (Debian 8.3.0-6) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e1fa1' '-L/usr/lib/x86_64-linux-gnu/stubs' '-L/usr/lib/x86_64-linux-gnu' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccl4dd2D.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e1fa1 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_e1fa1.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_e1fa1.dir/cmake_device_link.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e1fa1' '-L/usr/lib/x86_64-linux-gnu/stubs' '-L/usr/lib/x86_64-linux-gnu' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CUDA implicit link information from above output:
-  link line regex: [^( *|.*[/\])(link\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_e24e0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework]
-  ignore line: [Copyright (C) Microsoft Corporation. All rights reserved.]
-  ignore line: []
-  ignore line: [  Compiling CUDA source file ..\..\..\..\..\..\..\Program Files\CMake\share\cmake-3.17\Modules\CMakeCUDACompilerABI.cu...]
-  ignore line: [  ]
-  ignore line: [  C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe" -gencode=arch=compute_30 code=\"sm_30 compute_30\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include"     --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler="/EHsc -Zi -Ob0 -v" -g   -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FdcmTC_e24e0.dir\Debug\vc142.pdb /FS /Zi /RTC1 /MDd /GR" -o cmTC_e24e0.dir\Debug\CMakeCUDACompilerABI.obj "C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCUDACompilerABI.cu" ]
-  ignore line: [cl : Command line warning D9002: ignoring unknown option '-v' [C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\cmTC_e24e0.vcxproj]]
-  ignore line: [cl : Command line warning D9002: ignoring unknown option '-v' [C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\cmTC_e24e0.vcxproj]]
-  ignore line: [  CMakeCUDACompilerABI.cu]
-  ignore line: [cl : Command line warning D9002: ignoring unknown option '-v' [C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\cmTC_e24e0.vcxproj]]
-  ignore line: [LINK : warning LNK4044: unrecognized option '/v']
-  ignore line: [ ignored [C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\cmTC_e24e0.vcxproj]]
-  ignore line: [     Creating library C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp/Debug/cmTC_e24e0.lib and object C:/Users/cucam/Desktop/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp/Debug/cmTC_e24e0.exp]
-  ignore line: [  cmTC_e24e0.vcxproj -> C:\Users\cucam\Desktop\CUDA-Image-Processing\build\CMakeFiles\CMakeTmp\Debug\cmTC_e24e0.exe]
-  ignore line: []
-  ignore line: []
-  implicit libs: []
-  implicit dirs: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_e1fa1/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e1fa1.dir/build.make CMakeFiles/cmTC_e1fa1.dir/build]
+  ignore line: [make[1]: Entering directory '/home/Canyon/Dev/CUDA-Image-Processing/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CUDA object CMakeFiles/cmTC_e1fa1.dir/CMakeCUDACompilerABI.cu.o]
+  ignore line: [/usr/bin/nvcc     -x cu -c /usr/share/cmake-3.13/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_e1fa1.dir/CMakeCUDACompilerABI.cu.o]
+  ignore line: [Linking CUDA device code CMakeFiles/cmTC_e1fa1.dir/cmake_device_link.o]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1fa1.dir/dlink.txt --verbose=1]
+  ignore line: [/usr/bin/nvcc    -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/cmTC_e1fa1.dir/CMakeCUDACompilerABI.cu.o -o CMakeFiles/cmTC_e1fa1.dir/cmake_device_link.o ]
+  ignore line: [Linking CUDA executable cmTC_e1fa1]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1fa1.dir/link.txt --verbose=1]
+  ignore line: [/usr/lib/nvidia-cuda-toolkit/bin/g++  -v CMakeFiles/cmTC_e1fa1.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_e1fa1.dir/cmake_device_link.o -o cmTC_e1fa1  -L"/usr/lib/x86_64-linux-gnu/stubs" -L"/usr/lib/x86_64-linux-gnu" -lcudadevrt -lcudart_static -lrt -lpthread -ldl]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=g++-8]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 8.3.0-6' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (Debian 8.3.0-6) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e1fa1' '-L/usr/lib/x86_64-linux-gnu/stubs' '-L/usr/lib/x86_64-linux-gnu' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccl4dd2D.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e1fa1 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/x86_64-linux-gnu/stubs -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_e1fa1.dir/CMakeCUDACompilerABI.cu.o CMakeFiles/cmTC_e1fa1.dir/cmake_device_link.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccl4dd2D.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_e1fa1] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o] ==> ignore
+    arg [-L/usr/lib/x86_64-linux-gnu/stubs] ==> dir [/usr/lib/x86_64-linux-gnu/stubs]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..]
+    arg [CMakeFiles/cmTC_e1fa1.dir/CMakeCUDACompilerABI.cu.o] ==> ignore
+    arg [CMakeFiles/cmTC_e1fa1.dir/cmake_device_link.o] ==> ignore
+    arg [-lcudadevrt] ==> lib [cudadevrt]
+    arg [-lcudart_static] ==> lib [cudart_static]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-ldl] ==> lib [dl]
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/x86_64-linux-gnu/stubs] ==> [/usr/lib/x86_64-linux-gnu/stubs]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8] ==> [/usr/lib/gcc/x86_64-linux-gnu/8]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> [/usr/lib]
+  implicit libs: [cudadevrt;cudart_static;rt;pthread;dl;stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/usr/lib/x86_64-linux-gnu/stubs;/usr/lib/x86_64-linux-gnu;/usr/lib/gcc/x86_64-linux-gnu/8;/usr/lib;/lib/x86_64-linux-gnu;/lib]
   implicit fwks: []
 
 

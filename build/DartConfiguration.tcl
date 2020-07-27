@@ -4,30 +4,40 @@
 
 
 # Configuration directories and files
-SourceDirectory: C:/Users/cucam/Desktop/CUDA-Image-Processing
-BuildDirectory: C:/Users/cucam/Desktop/CUDA-Image-Processing/build
+SourceDirectory: /home/Canyon/Dev/CUDA-Image-Processing
+BuildDirectory: /home/Canyon/Dev/CUDA-Image-Processing/build
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: DESKTOP-4USJT1M
+Site: mx
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Win32-MSBuild
+BuildName: Linux-c++
 
 # Subprojects
 LabelsForSubprojects: 
 
 # Submission information
-SubmitURL: http://
+IsCDash: 
+CDashVersion: 
+QueryCDashVersion: 
+DropSite: 
+DropLocation: 
+DropSiteUser: 
+DropSitePassword: 
+DropSiteMode: 
+DropMethod: http
+TriggerSite: 
+ScpCommand: /usr/bin/scp
 
 # Dashboard start time
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Users/cucam/Desktop/CUDA-Image-Processing"
-MakeCommand: "C:\Program Files\CMake\bin\cmake.exe" --build . --config "${CTEST_CONFIGURATION_TYPE}"
+ConfigureCommand: "/usr/bin/cmake" "/home/Canyon/Dev/CUDA-Image-Processing"
+MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -44,7 +54,7 @@ SVNOptions:
 SVNUpdateOptions: 
 
 # Git options
-GITCommand: C:/Program Files/Git/cmd/git.exe
+GITCommand: /usr/bin/git
 GITInitSubmodules: 
 GITUpdateOptions: 
 GITUpdateCustom: 
@@ -57,20 +67,18 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: C:/Program Files/Git/cmd/git.exe
+UpdateCommand: /usr/bin/git
 UpdateOptions: 
 UpdateType: git
 
 # Compiler info
-Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.25.28610/bin/Hostx64/x64/cl.exe
-CompilerVersion: 19.25.28612.0
+Compiler: /usr/bin/c++
+CompilerVersion: 8.3.0
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
 ValgrindCommand: 
 ValgrindCommandOptions: 
-DrMemoryCommand: 
-DrMemoryCommandOptions: 
 MemoryCheckType: 
 MemoryCheckSanitizerOptions: 
 MemoryCheckCommand: MEMORYCHECK_COMMAND-NOTFOUND
@@ -78,7 +86,7 @@ MemoryCheckCommandOptions:
 MemoryCheckSuppressionFile: 
 
 # Coverage
-CoverageCommand: COVERAGE_COMMAND-NOTFOUND
+CoverageCommand: /usr/bin/gcov
 CoverageExtraFlags: -l
 
 # Cluster commands
@@ -96,7 +104,7 @@ TimeOut: 1500
 # so would cause the system load to exceed this value.
 TestLoad: 
 
-UseLaunchers: 0
+UseLaunchers: 
 CurlOptions: 
 # warning, if you add new options here that have to do with submit,
 # you have to update cmCTestSubmitCommand.cxx

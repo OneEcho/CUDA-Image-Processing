@@ -1,143 +1,147 @@
+#include <opencv2/core.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui.hpp>
+
 #include <cuda.h>
-#include <stdio.h>
-#define STB_IMAGE_IMPLEMENTATION
-#include "../include/stb_image.h"
-#define STB_IMAGE_WRITE_IMPLEMENTATION
-#include "../include/stb_image_write.h"
+#include <iostream>
+#include <string>
 
-// https://gist.github.com/jefflarkin/5390993
-// Macro for checking cuda errors following a cuda launch or api call
-#define cudaCheckError()                                                       \
-  {                                                                            \
-    cudaError_t e = cudaGetLastError();                                        \
-    if (e != cudaSuccess) {                                                    \
-      printf("Cuda failure %s:%d: '%s'\n", __FILE__, __LINE__,                 \
-             cudaGetErrorString(e));                                           \
-      exit(0);                                                                 \
-    }                                                                          \
-  }
+using namespace cv;
 
-__global__ void imgProcessingKernel(unsigned char *d_origImg,
-                                    unsigned char *d_newImg) {
-  // each thread will work on pixel value of the image, a pixel is represented
-  // with 3 values R, G, and B
-  int col = (blockIdx.x * blockDim.x) + threadIdx.x;
-  int row = (blockIdx.y * blockDim.y) + threadIdx.y;
+// // https://gist.github.com/jefflarkin/5390993
+// // Macro for checking cuda errors following a cuda launch or api call
+// #define cudaCheckError()                                                \
+//     {                                                                    \
+//       cudaError_t e = cudaGetLastError();                               \
+//       if (e != cudaSuccess) {                                           \
+//           printf("Cuda failure %s:%d: '%s'\n", __FILE__, __LINE__,      \
+//                  cudaGetErrorString(e));                                \
+//           exit(0);                                                      \
+//       }                                                                 \
+//   }
 
-  if (row == 0 || row == 255 || col == 0 || col == 767) {
-    return;
-  }
+// __global__ void imgProcessingKernel(unsigned char *d_origImg,
+//                                     unsigned char *d_newImg) {
+//     // each thread will work on pixel value of the image, a pixel is represented
+//     // with 3 values R, G, and B
+//     int col = (blockIdx.x * blockDim.x) + threadIdx.x;
+//     int row = (blockIdx.y * blockDim.y) + threadIdx.y;
 
-  // gaussian blur kernel
-  int blurKernel[3][3] = {{1, 2, 1}, {2, 4, 2}, {1, 2, 1}};
+//     if (row == 0 || row == 255 || col == 0 || col == 767) {
+//         return;
+//     }
 
-  // edge detection kernel
-  int edgeDetectionKernel[3][3] = {{1, 0, -1}, {0, 0, 0}, {-1, 0, 1}};
+//     // gaussian blur kernel
+//     int blurKernel[3][3] = {{1, 2, 1}, {2, 4, 2}, {1, 2, 1}};
 
-  // emboss kernel
-  int embossKernel[3][3] = {{-2, -1, 0}, {-1, 1, 1}, {0, 1, 2}};
+//     // edge detection kernel
+//     int edgeDetectionKernel[3][3] = {{1, 0, -1}, {0, 0, 0}, {-1, 0, 1}};
 
-  // matrix to hold neighbor values
-  int mat[3][3];
+//     // emboss kernel
+//     int embossKernel[3][3] = {{-2, -1, 0}, {-1, 1, 1}, {0, 1, 2}};
 
-  // calculate neighbor values and put them in a matrix
-  mat[0][0] = d_origImg[(col - 3) + 768 * (row - 1)];
-  mat[1][0] = d_origImg[col + 768 * (row - 1)];
-  mat[2][0] = d_origImg[(col + 3) + 768 * (row - 1)];
-  mat[0][1] = d_origImg[(col - 3) + 768 * row];
-  mat[1][1] = d_origImg[col + 768 * row];
-  mat[2][1] = d_origImg[(col + 3) + 768 * row];
-  mat[0][2] = d_origImg[(col - 3) + 768 * (row + 1)];
-  mat[1][2] = d_origImg[col + 768 * (row + 1)];
-  mat[2][2] = d_origImg[(col + 3) + 768 * (row + 1)];
+//     // matrix to hold neighbor values
+//     int mat[3][3];
 
-  int newRGBValue = (mat[0][0] * edgeDetectionKernel[0][0]) +
-                    (mat[1][0] * edgeDetectionKernel[1][0]) +
-                    (mat[2][0] * edgeDetectionKernel[2][0]) +
-                    (mat[0][1] * edgeDetectionKernel[0][1]) +
-                    (mat[1][1] * edgeDetectionKernel[1][1]) +
-                    (mat[2][1] * edgeDetectionKernel[2][1]) +
-                    (mat[0][2] * edgeDetectionKernel[0][2]) +
-                    (mat[1][2] * edgeDetectionKernel[1][2]) +
-                    (mat[2][2] * edgeDetectionKernel[2][2]);
+//     // calculate neighbor values and put them in a matrix
+//     mat[0][0] = d_origImg[(col - 3) + 768 * (row - 1)];
+//     mat[1][0] = d_origImg[col + 768 * (row - 1)];
+//     mat[2][0] = d_origImg[(col + 3) + 768 * (row - 1)];
+//     mat[0][1] = d_origImg[(col - 3) + 768 * row];
+//     mat[1][1] = d_origImg[col + 768 * row];
+//     mat[2][1] = d_origImg[(col + 3) + 768 * row];
+//     mat[0][2] = d_origImg[(col - 3) + 768 * (row + 1)];
+//     mat[1][2] = d_origImg[col + 768 * (row + 1)];
+//     mat[2][2] = d_origImg[(col + 3) + 768 * (row + 1)];
 
-  d_newImg[col + 768 * row] = newRGBValue; // r, g, or b value is copied
-}
+//     int newRGBValue = (mat[0][0] * edgeDetectionKernel[0][0]) +
+//         (mat[1][0] * edgeDetectionKernel[1][0]) +
+//         (mat[2][0] * edgeDetectionKernel[2][0]) +
+//         (mat[0][1] * edgeDetectionKernel[0][1]) +
+//         (mat[1][1] * edgeDetectionKernel[1][1]) +
+//         (mat[2][1] * edgeDetectionKernel[2][1]) +
+//         (mat[0][2] * edgeDetectionKernel[0][2]) +
+//         (mat[1][2] * edgeDetectionKernel[1][2]) +
+//         (mat[2][2] * edgeDetectionKernel[2][2]);
 
-__host__ void imgProcessing(unsigned char *h_origImg, unsigned char *h_newImg,
-                            int imgSize) {
-  unsigned char *d_origImg;
-  unsigned char *d_newImg;
+//     d_newImg[col + 768 * row] = newRGBValue; // r, g, or b value is copied
+// }
 
-  // allocate memory for the original image, new image, and convolution kernel
-  // on the device
-  cudaMalloc((void **)&d_origImg, imgSize);
-  cudaMalloc((void **)&d_newImg, imgSize);
+__host__ void imgProcessing(const Mat &h_origImg, const Mat &h_newImg) {
+    std::vector<uchar> d_origImg;
+    std::vector<uchar> d_newImg;
+    size_t imageSize = h_origImg.rows * h_origImg.cols * sizeof(uchar);
 
-  // copy the original image data from the host to the original image data
-  // allocated on the device
-  cudaMemcpy(d_origImg, h_origImg, imgSize, cudaMemcpyHostToDevice);
+    // copy Mat data into vectors of unsigned chars
+    d_origImg.assign(h_origImg.data, h_origImg.data + h_origImg.total() * h_origImg.channels());
+    d_newImg.assign(h_newImg.data, h_newImg.data + h_newImg.total() * h_newImg.channels());
 
-  // 8 x 8 is 64 threads per block
-  dim3 threadsPerBlock(8, 8);
-  // 96 x 32 blocks or 3,072 blocks
-  dim3 numBlocks(768 / threadsPerBlock.x, 256 / threadsPerBlock.y);
+    // allocate memory for the original image, new image, and convolution kernel
+    // on the device
+    cudaMalloc((void **)d_origImg.data(), imageSize);
+    cudaMalloc((void **)d_newImg.data(), imageSize);
 
-  // perform image processing with 196,608 threads total, which is enough for a
-  // 768 x 256 array
-  imgProcessingKernel<<<numBlocks, threadsPerBlock>>>(d_origImg, d_newImg);
-  cudaThreadSynchronize();
-  cudaCheckError();
+    // // copy the original image data from the host to the original image data
+    // // allocated on the device
+    // cudaMemcpy(d_origImg, h_origImg, imgSize, cudaMemcpyHostToDevice);
 
-  // copy device image to host image
-  cudaMemcpy(h_newImg, d_newImg, imgSize, cudaMemcpyDeviceToHost);
+    // // 8 x 8 is 64 threads per block
+    // dim3 threadsPerBlock(8, 8);
+    // // 96 x 32 blocks or 3,072 blocks
+    // dim3 numBlocks(768 / threadsPerBlock.x, 256 / threadsPerBlock.y);
 
-  cudaFree(d_newImg);
+    // // perform image processing with 196,608 threads total, which is enough for a
+    // // 768 x 256 array
+    // imgProcessingKernel<<<numBlocks, threadsPerBlock>>>(d_origImg, d_newImg);
+    // cudaThreadSynchronize();
+    // cudaCheckError();
+
+    // // copy device image to host image
+    // cudaMemcpy(h_newImg, d_newImg, imgSize, cudaMemcpyDeviceToHost);
+
+    // cudaFree(d_newImg);
 }
 
 int main(int argc, char ** argv) {
 
-  int imgWidth, imgHeight, imgChannels;
+    std::string imagePath, newImagePath;
 
-  char *imgPath, *newImagePath;
+    if(argc < 3) {
+        std::cout << "Not enough arguments provided. Please provide the path to a image and a path for the newly created image.\n";
+        return 1;
+    } else {
+        imagePath = argv[1];
+        newImagePath = argv[2];
+    }
 
-  if(argc < 3) {
-    printf("Not enough arguments provided. Please provide the path to a image and a path for the newly created image.\n");
-    exit(1);
-  } else {
-    imgPath = argv[1];
-    newImagePath = argv[2];
-  }
+    // allocate memory for original image on host
+    Mat h_origImg = imread(imagePath, IMREAD_COLOR);
+    if(h_origImg.empty()) {
+        std::cout << "Could not read the image: " << imagePath << std::endl;
+        return 1;
+    }
 
-  // allocate memory for original image on host
-  unsigned char *h_origImg =
-      stbi_load(imgPath, &imgWidth, &imgHeight, &imgChannels, 0);
-  if (h_origImg == NULL) {
-    printf("Error in loading the image\n");
-    exit(1);
-  }
+    // calculate the image size
+    Size imageSize = h_origImg.size();
+    int imgChannels = h_origImg.channels();
+    int imgWidth = imageSize.width;
+    int imgHeight = imageSize.height;
 
-  // calculate the image size
-  unsigned long int imgSize = (imgWidth * imgHeight) * imgChannels;
+    std::cout << "Loaded an image with a width of " << imgWidth << " and a height of "
+              << imgHeight << ". The image has " << imgChannels << " channels.\n";
 
-  printf("Loaded an image with a width of %dpx, a height of %dpx and %d "
-         "channels. The image size calculate is then imgChannels * imgHeight * "
-         "imgChannels = %lu\n",
-         imgWidth, imgHeight, imgChannels, imgSize);
+    // create a new Mat for the processed image
+    Mat h_newImg(imageSize, h_origImg.type());
 
-  // allocate memory for the new image on host
-  unsigned char *h_newImg = (unsigned char *)malloc(imgSize);
+    // // host function to start the image processing
+    // imgProcessing(h_origImg, h_newImg, imgSize);
+    // cudaDeviceSynchronize();
 
-  // host function to start the image processing
-  imgProcessing(h_origImg, h_newImg, imgSize);
-  cudaDeviceSynchronize();
+    // create the new image
+    imwrite(newImagePath, h_newImg);
 
-  // create the new image
-  stbi_write_jpg(newImagePath, imgWidth, imgHeight,
-                 imgChannels, h_newImg, 100);
+    // stbi_image_free(h_origImg);
+    // free(h_newImg);
 
-  stbi_image_free(h_origImg);
-  free(h_newImg);
-
-  return 0;
+    return 0;
 }
