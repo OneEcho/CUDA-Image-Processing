@@ -14,7 +14,7 @@ CostDataFile:
 Site: mx
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Linux-c++
+BuildName: Linux-clang++-7
 
 # Subprojects
 LabelsForSubprojects: 
@@ -72,8 +72,8 @@ UpdateOptions:
 UpdateType: git
 
 # Compiler info
-Compiler: /usr/bin/c++
-CompilerVersion: 8.3.0
+Compiler: /bin/clang++-7
+CompilerVersion: 7.0.1
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
